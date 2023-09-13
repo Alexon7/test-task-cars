@@ -1,8 +1,15 @@
+import React from 'react';
+import { MainContainer } from '../../components/Container/MainContainer.styled';
+// import { Filter } from '../../components/Filter/Filter';
+
 const CatalogPage = () => {
   return (
-    <div>
-      <h2>CatalogPage</h2>
-     </div>
+     <>
+       <MainContainer>
+      {/* <Filter /> */}
+      </MainContainer>
+
+    </>
   );
 };
 
