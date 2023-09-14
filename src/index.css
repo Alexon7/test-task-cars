@@ -5,6 +5,65 @@
 html,
 body {
   margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #aca7ca, #e6e5e4);
+
+  overflow-x: hidden;
+
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+svg {
+  display: block;
+}
+
+/* html,
+body {
+  margin: 0;
   font-family: 'Manrope', sans-serif;
   background-color: #fff;
    background: radial-gradient(
@@ -78,4 +137,4 @@ img {
 
 svg {
   display: block;
-}
+} */

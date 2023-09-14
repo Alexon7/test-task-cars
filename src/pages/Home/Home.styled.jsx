@@ -1,7 +1,24 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
+import hero from '../../image/auto.jpg';
 
+export const Hero = styled.div`
+  display: flex;
+  background: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.1),
+      rgba(47, 48, 58, 0.5)
+    ),
+    url(${hero});
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+`;
   
 export const HeroTitle = styled.h1`
  color: #333;
