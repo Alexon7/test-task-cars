@@ -12,12 +12,14 @@ export const Hero = styled.div`
     ),
     url(${hero});
 
-  background-repeat: no-repeat;
+ background-size: cover, cover;
   background-attachment: fixed;
-  background-size: cover;
+  background-repeat: no-repeat;
+  
+ 
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height:calc(100vh - 60px);
 `;
   
 export const HeroTitle = styled.h1`
@@ -31,12 +33,12 @@ export const HeroTitle = styled.h1`
 
 export const HeroDescription = styled.p`
    font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
   margin-bottom: 50px;
-   max-width: 600px;
+   max-width: 700px;
    text-align: center;
-  color: #555;
+  color: #333;
 `;
 
 export const HeroLink = styled(Link)`

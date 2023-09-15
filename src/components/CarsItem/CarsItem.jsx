@@ -1,22 +1,24 @@
 import {
-  CarCard,
-  CarImageWrapper,
-  CarImage,
-  ContentWrapper,
-  MainContent,
-  SecondaryContent,
-  MainText,
-  MainTextModel,
-  SecondaryText,
+  Card,
+  CardTitle,
+  Img,
+  ImgThumb,
+  AccentTitle,
+  InfoList,
+  InfoText,
+  LearnMoreBtn,
+  SecondadyList,
+//   FavoriteBtn,
+//   HeartSvg,
 } from './CarsItem.syled';
-
-import Button from '../Button/Button';
-import Modal from '../Modal/Modal'
-import { useState } from "react";
-
-
-const CarsItem = ({
-  model,
+// import sprite from '../../images/sprite.svg';
+import { useState } from 'react';
+import Modal from '../Modal/Modal';
+import CarDetails from '../Card/Card';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { selectFavorites } from 'redux/selectors';
+// import { addFavorite, removeFavorite } from 'redux/slice';
+const CarItem = ({  model,
   make,
   year,
   rentalPrice,
@@ -32,59 +34,69 @@ const CarsItem = ({
   description,
   accessories,
   rentalConditions,
-  mileage,
-}) => {
+  mileage, }) => {
+ 
+//   const dispatch = useDispatch();
+//   const favorites = useSelector(selectFavorites);
+//   const isFavorite = favorites.some(favorite => favorite.id === id);
 
-     const [showModal, setShowModal] = useState(false);
+//   const handleClick = () => {
+//     if (isFavorite) {
+//       dispatch(removeFavorite(car));
+//     } else {
+//       dispatch(addFavorite(car));
+//     }
+//   };
+  const [showModal, setShowModal] = useState(false);
   const toggleModal = () => setShowModal(prevShowModal => !prevShowModal);
-    
-    const addressParts = address.split(', ');
-    const city = addressParts[1];
-    const country = addressParts[2];
-    const firstFunctionality = functionalities[0];
 
+  const city = address.split(', ')[1];
+  const country = address.split(', ')[2];
   return (
     <>
-      <CarCard key={id}>
-        <CarImageWrapper>
-          <CarImage src={img} alt="car" />
-        </CarImageWrapper>
-        <ContentWrapper>
-          <MainContent>
-            <MainText>
-              {make}
-              <MainTextModel> {model}, </MainTextModel>
-              {year}
-            </MainText>
-            <MainText>{rentalPrice}</MainText>
-          </MainContent>
-          <SecondaryContent>
-            <SecondaryText>{city}</SecondaryText>
-            <SecondaryText>{country}</SecondaryText>
-            <SecondaryText>{rentalCompany}</SecondaryText>
-            <SecondaryText>{type}</SecondaryText>
-            <SecondaryText>{make}</SecondaryText>
-            <SecondaryText>{id}</SecondaryText>
-            <SecondaryText>{firstFunctionality}</SecondaryText>
-          </SecondaryContent>
-          {/* <p>{isFavorite}</p>
-          <p>{fuelConsumption}</p>
-          <p>{engineSize}</p>
-          <p>{description}</p>
-          <p>{functionalities}</p>
-          <p>{rentalConditions}</p>
-          <p>{mileage}</p> */}
-        </ContentWrapper>
-              <Button type="button" onClick={toggleModal}>Learn more</Button>
-              {showModal && (
-          <Modal
-                      onClose={toggleModal}
-                      showModal={showModal}
-            key={id}
-            model={model}
+      <Card>
+        <ImgThumb>
+         <Img src={img} alt={`${make} ${model}`} />
+          {/* <FavoriteBtn
+            type="button"
+            aria-label="Add to favorite"
+            onClick={handleClick}
+          >
+            {/* <HeartSvg
+              style={isFavorite ? { stroke: '#0B44CD', fill: '#0B44CD' } : {}}
+            >
+              <use href={`${sprite}#icon-heard-normal`} /> */}
+            {/* </HeartSvg>
+          </FavoriteBtn> */}
+        </ImgThumb> 
+        <CardTitle>
+          <p>
+            {make} <AccentTitle>{model}</AccentTitle>, {year}
+          </p>
+          <p>{rentalPrice}</p>
+        </CardTitle>
+        <InfoList>
+          <InfoText>{city}</InfoText>
+          <InfoText>{country}</InfoText>
+          <InfoText>{rentalCompany}</InfoText>
+        </InfoList>
+        <SecondadyList>
+          <InfoText>{type}</InfoText>
+          <InfoText>{model}</InfoText>
+          <InfoText>{id}</InfoText>
+          <InfoText>{functionalities[0]}</InfoText>
+        </SecondadyList>
+        <LearnMoreBtn type="button" onClick={toggleModal}>
+          Learn more
+        </LearnMoreBtn>
+      </Card>
+      {showModal && (
+        <Modal onClose={toggleModal} showModal={showModal}>
+          <CarDetails model={model}
             make={make}
             year={year}
             rentalPrice={rentalPrice}
+            isFavorite={isFavorite}
             address={address}
             rentalCompany={rentalCompany}
             functionalities={functionalities}
@@ -97,12 +109,10 @@ const CarsItem = ({
             accessories={accessories}
             rentalConditions={rentalConditions}
             mileage={mileage}
-          />
-        )}
-              
-      </CarCard>
+            toggleModal={toggleModal} />
+        </Modal>
+      )}
     </>
   );
 };
-
-export default CarsItem;
+export default CarItem;
