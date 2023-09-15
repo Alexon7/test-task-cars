@@ -1,10 +1,10 @@
 import CarsItem from '../CarsItem/CarsItem';
-import { CarsGallery } from './CarsList.styled';
+import { CarsGallery } from '../CarsList/CarsList.styled';
 import { useSelector } from 'react-redux';
-import { selectCars } from '../../redux/selectors';
+import { selectFavorites } from '../../redux/selectors';
 
-const CarsList = () => {
-    const cars = useSelector(selectCars);
+const FavoritesCarList = () => {
+  const cars = useSelector(selectFavorites);
   return (
     <CarsGallery>
       {cars.map((car, index) => (
@@ -13,5 +13,4 @@ const CarsList = () => {
     </CarsGallery>
   );
 };
-
-export default CarsList;
+export default FavoritesCarList;

@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+Car Rental Service Application
+Welcome to the Car Rental Service Application! Our platform provides a seamless experience for renting cars in Ukraine. Below, you'll find descriptions of the three main sections of our application, each designed to make your car rental experience easy and enjoyable.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Home Page
+Overview: The home page is your gateway to the world of car rentals. Our website is designed with your convenience in mind, allowing you to access information about our offerings effortlessly.
 
-## Available Scripts
+Style and Design: Our website features a sleek and modern design that is both visually appealing and user-friendly. The use of  intuitive navigation ensures that you'll have a pleasant browsing experience.
 
-In the project directory, you can run:
+Car Catalog
+Explore Our Fleet: Our car catalog is the heart of our application, featuring a wide range of vehicles with varying specifications. You can easily filter and find the perfect car for your needs.
 
-### `npm start`
+Visual Presentation: You can click on a car to view more information, including rental options, specifications, and user ratings.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Favorite Listings
+Your Saved Listings: This section allows you to save your favorite car listings for easy access later. If you find a car you love but aren't ready to book, simply add it to your favorites.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Convenient Organization: Your saved listings are neatly organized, making it simple to compare and decide on the perfect car for your upcoming rental.
 
-### `npm test`
+Effortless Experience: Our user-friendly interface ensures that managing your favorite listings is hassle-free, allowing you to focus on planning your next adventure.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Thank you for choosing us as your car rental partner. Happy exploring!
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Скриншот приложения](./src/image/Welcom_Cars_Service.png)

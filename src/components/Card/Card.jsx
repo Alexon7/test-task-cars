@@ -19,7 +19,11 @@ import {
   CloseSvg,
 } from './Card.styled';
 import sprite from '../../image/sprite.svg';
-const CarDetails = ({ id,
+
+
+const CarDetails = ({ car, toggleModal }) => {
+     const {
+    id,
     year,
     make,
     model,
@@ -34,7 +38,7 @@ const CarDetails = ({ id,
     address,
     rentalConditions,
     mileage,
-    toggleModal }) => {
+  } = car;
     
     const city = address.split(', ')[1];
   const country = address.split(', ')[2];
