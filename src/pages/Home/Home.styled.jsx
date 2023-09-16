@@ -19,7 +19,7 @@ export const Hero = styled.div`
  
   background-position: center;
   width: 100%;
-  height:calc(100vh - 60px);
+  height:100vh;
 `;
   
 export const HeroTitle = styled.h1`
