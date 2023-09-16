@@ -1,7 +1,9 @@
 import { NavigationLink, Nav, PageHeader } from './Header.styled';
+import { MainContainer } from '../../components/Container/MainContainer.styled';
 
 const Header = () => {
   return (
+    <MainContainer>
     <PageHeader>
            <nav>
         <Nav>
@@ -16,7 +18,8 @@ const Header = () => {
           
         </Nav>
       </nav>
-    </PageHeader>
+      </PageHeader>
+      </MainContainer>
   );
 };
 

@@ -29,11 +29,12 @@ export const HeroTitle = styled.h1`
   line-height: 2.4;
   text-shadow: 1px 1px 2px #5c5757;
   text-align: center;
+  margin-top: 60px;
 `;
 
 export const HeroDescription = styled.p`
    font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
   margin-bottom: 50px;
    max-width: 700px;
