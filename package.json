@@ -2,7 +2,7 @@
   "name": "test-task-cars",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Alexon7.github.io/test-task-cars/",
+  "homepage": "https://Alexon7.github.io/test-task-cars",
   "dependencies": {
     "@emotion/styled": "^11.11.0",
     "@reduxjs/toolkit": "^1.9.5",
