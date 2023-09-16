@@ -1,4 +1,4 @@
-<span style="font-size: 40px; font-weight: bold;line-height: 2.4;">Car Rental Service</span>Car Rental Service
+**Car Rental Service**
 
 **Car Rental Service Application**
 Welcome to the Car Rental Service Application! Our platform provides a seamless experience for renting cars in Ukraine. Below, you'll find descriptions of the three main sections of our application, each designed to make your car rental experience easy and enjoyable.
