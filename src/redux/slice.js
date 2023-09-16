@@ -30,6 +30,13 @@ const carsSlice = createSlice({
       favorites: [],
     isLoading: false,
     error: null,
+     // Add filtering-related state
+    filters: {
+      selectedBrand: null,
+      selectedPrice: null,
+      fromMileage: '',
+      toMileage: '',
+    },
   },reducers: {
     addFavorite: (state, action) => {
       state.favorites.push(action.payload);
@@ -38,8 +45,23 @@ const carsSlice = createSlice({
       state.favorites = state.favorites.filter(
         item => item.id !== action.payload.id
       );
-    }
+    },
+ 
+   // Add reducers for updating filter values
+    setSelectedBrand: (state, action) => {
+      state.filters.selectedBrand = action.payload;
+    },
+    setSelectedPrice: (state, action) => {
+      state.filters.selectedPrice = action.payload;
+    },
+    setFromMileage: (state, action) => {
+      state.filters.fromMileage = action.payload;
+    },
+    setToMileage: (state, action) => {
+      state.filters.toMileage = action.payload;
+    },
   },
+
   extraReducers: builder =>
     builder
       .addCase(fetchAdverts.pending, pendingReducer)
@@ -48,4 +70,7 @@ const carsSlice = createSlice({
 });
 
 export const carsReducer = carsSlice.reducer;
-export const { addFavorite, removeFavorite } = carsSlice.actions;
+export const { addFavorite, removeFavorite, setSelectedBrand,
+  setSelectedPrice,
+  setFromMileage,
+  setToMileage, } = carsSlice.actions;

@@ -14,7 +14,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={<Loader />} persistor={persistor}>
-    <BrowserRouter >
+    <BrowserRouter basename="/test-task-car">
     <App />
       </BrowserRouter>
       </PersistGate>

@@ -1,3 +1,5 @@
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Select from 'react-select';
 import {
   FilterForm,
@@ -6,6 +8,13 @@ import {
   SubmitButton,
 } from './Filter.styled';
 import makes from '../../data/makes.json';
+import {
+    setSelectedBrand,
+    setSelectedPrice,
+    setFromMileage,
+    setToMileage
+} from '../../redux/slice';
+import { fetchAdverts } from '../../redux/operations';
 
 const brands = makes.map(make => ({ value: make, label: make }));
 const pricesPerHour = [
@@ -22,13 +31,51 @@ const pricesPerHour = [
 ];
 
 const Filter = () => {
+
+  const selectedBrand = useSelector(state => state.cars.filters.selectedBrand);
+  const selectedPrice = useSelector(state => state.cars.filters.selectedPrice);
+  const fromMileage = useSelector(state => state.cars.filters.fromMileage);
+  const toMileage = useSelector(state => state.cars.filters.toMileage);
+  const dispatch = useDispatch();
+
+  const handleBrandChange = selectedOption => {
+    dispatch(setSelectedBrand(selectedOption));
+  };
+
+  const handlePriceChange = selectedOption => {
+    dispatch(setSelectedPrice(selectedOption));
+    };
+    
+    const handleFromMileageChange = event => {
+    dispatch(setFromMileage(event.target.value));
+  };
+
+  const handleToMileageChange = event => {
+    dispatch(setToMileage(event.target.value));
+  };
+
+  const handleSubmit = event => {
+      event.preventDefault();
+      
+       dispatch(fetchAdverts({
+      selectedBrand, 
+      selectedPrice, 
+      fromMileage,
+      toMileage,
+    }));
+    // You can use selectedBrand, selectedPrice, fromMileage, and toMileage for filtering.
+    // Implement your filtering logic here.
+    };
+    
   return (
-    <FilterForm>
+    <FilterForm onSubmit={handleSubmit}>
       <div className="filter-brand">
         <FormLabel>Car brand</FormLabel>
         <Select
           classNamePrefix="filter-select"
-          options={brands}
+                  options={brands}
+                   value={selectedBrand}
+          onChange={handleBrandChange}
           placeholder="Enter the text"
         />
       </div>
@@ -36,14 +83,18 @@ const Filter = () => {
         <FormLabel>Price / 1 hour</FormLabel>
         <Select
           classNamePrefix="filter-select"
-          options={pricesPerHour}
+                  options={pricesPerHour}
+                   value={selectedPrice}
+          onChange={handlePriceChange}
           placeholder="Enter the text"
         />
       </div>
       <div>
         <FormLabel>Car mileage / km</FormLabel>
-        <MileageInput type="text" placeholder="From" />
-        <MileageInput type="text" placeholder="To" />
+        <MileageInput type="text" placeholder="From"  value={fromMileage}
+          onChange={handleFromMileageChange}/>
+        <MileageInput type="text" placeholder="To"  value={toMileage}
+          onChange={handleToMileageChange}  />
       </div>
       <SubmitButton type="submit">Search</SubmitButton>
     </FilterForm>
