@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/test-task-cars/static/css/main.c3a6fafb.css",
+    "main.js": "/test-task-cars/static/js/main.aa739cb4.js",
+    "static/media/auto.jpg": "/test-task-cars/static/media/auto.156f605177fd6ff461da.jpg",
+    "static/media/sprite.svg": "/test-task-cars/static/media/sprite.b1253fb47c5645216f9457b36a217b7b.svg",
+    "index.html": "/test-task-cars/index.html",
+    "main.c3a6fafb.css.map": "/test-task-cars/static/css/main.c3a6fafb.css.map",
+    "main.aa739cb4.js.map": "/test-task-cars/static/js/main.aa739cb4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3a6fafb.css",
+    "static/js/main.aa739cb4.js"
+  ]
+}
