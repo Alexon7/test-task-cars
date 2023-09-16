@@ -9,7 +9,7 @@ import { CatalogWrapper, LoadMoreBtn } from './Catalog.styled';
 import Loader from '../../components/Loader/Loader';
 import { selectError, selectIsLoading } from '../../redux/selectors';
 
-// import { Filter } from '../../components/Filter/Filter';
+import  Filter  from '../../components/Filter/Filter';
 
 const CatalogPage = () => {
    const [page, setPage] = useState(1);
@@ -26,15 +26,15 @@ const dispatch = useDispatch();
   return (
      <>
           <MainContainer>
-               <CatalogWrapper>
+        <CatalogWrapper>
+           <Filter />
         {isLoading && !error && <Loader />}
       {error && <b>{error}</b>}
           <CarsList />
                   {32 / 8 > page && !isLoading &&
                       <LoadMoreBtn onClick={loadMore}>Load More</LoadMoreBtn>}
       </CatalogWrapper>
-      {/* <Filter /> */}
-      </MainContainer>
+           </MainContainer>
 
     </>
   );

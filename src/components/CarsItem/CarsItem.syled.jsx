@@ -69,7 +69,6 @@ export const LearnMoreBtn = styled.button`
   display: flex;
   height: 44px;
   padding: 12px 99px;
-  margin-top: 28px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
