@@ -12,24 +12,22 @@ export const Hero = styled.div`
       rgba(47, 48, 58, 0.5)
     ),
     url(${hero});
-      @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-         background: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.1),
-      rgba(47, 48, 58, 0.5)
-    ),
-    url(${heroR});
+  @media (min-device-pixel-ratio: 2) {
+    background: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.1),
+        rgba(47, 48, 58, 0.5)
+      ),
+      url(${heroR});
+  }
 
- background-size: cover, cover;
+  background-size: cover, cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  
- 
+
   background-position: center;
   width: 100%;
-  height:100vh;
+  height: 100vh;
 `;
 
 export const HeroTitle = styled.h1`
