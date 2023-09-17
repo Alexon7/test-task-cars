@@ -9,7 +9,7 @@ import { CatalogWrapper, LoadMoreBtn } from './Catalog.styled';
 import Loader from '../../components/Loader/Loader';
 import { selectError, selectIsLoading } from '../../redux/selectors';
 
-import  Filter  from '../../components/Filter/Filter';
+// import  Filter  from '../../components/Filter/Filter';
 
 const CatalogPage = () => {
    const [page, setPage] = useState(1);
@@ -27,7 +27,7 @@ const dispatch = useDispatch();
      <>
           <MainContainer>
         <CatalogWrapper>
-           <Filter />
+           {/* <Filter /> */}
         {isLoading && !error && <Loader />}
       {error && <b>{error}</b>}
           <CarsList />
