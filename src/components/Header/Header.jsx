@@ -7,15 +7,15 @@ const Header = () => {
     <PageHeader>
            <nav>
         <Nav>
-          
+          <li>
             <NavigationLink to="/">Home</NavigationLink>
-          
-          
+          </li>
+           <li>
             <NavigationLink to="/catalog">Catalog</NavigationLink>
-         
-         
+         </li>
+          <li>
             <NavigationLink to="/favorites">Favorites</NavigationLink>
-          
+          </li>
         </Nav>
       </nav>
       </PageHeader>

@@ -1,17 +1,10 @@
 import styled from '@emotion/styled';
 
 export const Card = styled.li`
-  width: 100%;
+  width: calc((100% - 29px * 3) / 4);
   display: flex;
   flex-direction: column;
-
-  @media screen and (min-width: 768px) {
-    width: calc((100% - 29px) / 2);
-  }
-  @media screen and (min-width: 1224px) {
-    width: calc((100% - 29px * 3) / 4);
-  }
-`;
+ `;
 
 export const ImgThumb = styled.div`
   position: relative;

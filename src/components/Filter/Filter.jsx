@@ -63,8 +63,8 @@ const Filter = () => {
       fromMileage,
       toMileage,
     }));
-    // You can use selectedBrand, selectedPrice, fromMileage, and toMileage for filtering.
-    // Implement your filtering logic here.
+    // use selectedBrand, selectedPrice, fromMileage, and toMileage for filtering.
+    //  filtering logic here.
     };
     
   return (

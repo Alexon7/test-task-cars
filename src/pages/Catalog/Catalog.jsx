@@ -3,7 +3,6 @@ import { MainContainer } from '../../components/Container/MainContainer.styled';
 import CarsList from '../../components/CarsList/CarsList';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import * as CarsService from '../../api/api';
 import { fetchAdverts } from '../../redux/operations';
 import { CatalogWrapper, LoadMoreBtn } from './Catalog.styled';
 import Loader from '../../components/Loader/Loader';
