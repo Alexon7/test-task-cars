@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 import hero from '../../image/auto.jpg';
+import heroR from '../../image/auto@2x.jpg';
 
 export const Hero = styled.div`
   display: flex;
@@ -11,6 +12,15 @@ export const Hero = styled.div`
       rgba(47, 48, 58, 0.5)
     ),
     url(${hero});
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+         background: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.1),
+      rgba(47, 48, 58, 0.5)
+    ),
+    url(${heroR});
 
  background-size: cover, cover;
   background-attachment: fixed;
@@ -21,9 +31,9 @@ export const Hero = styled.div`
   width: 100%;
   height:100vh;
 `;
-  
+
 export const HeroTitle = styled.h1`
- color: #333;
+  color: #333;
   font-weight: bold;
   font-size: 40px;
   line-height: 2.4;
@@ -33,12 +43,12 @@ export const HeroTitle = styled.h1`
 `;
 
 export const HeroDescription = styled.p`
-   font-weight: 600;
+  font-weight: 600;
   font-size: 16px;
   line-height: 1.2;
   margin-bottom: 50px;
-   max-width: 700px;
-   text-align: center;
+  max-width: 700px;
+  text-align: center;
   color: #333;
 `;
 
@@ -55,6 +65,6 @@ export const HeroLink = styled(Link)`
 
   &:hover,
   &:focus {
-    background-color: #4a2672; ;
+    background-color: #4a2672;
   }
 `;
