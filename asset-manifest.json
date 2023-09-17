@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test-task-cars/static/css/main.c3a6fafb.css",
-    "main.js": "/test-task-cars/static/js/main.384ceaaf.js",
+    "main.js": "/test-task-cars/static/js/main.296e7081.js",
     "static/js/108.8f8b4896.chunk.js": "/test-task-cars/static/js/108.8f8b4896.chunk.js",
     "static/js/75.edaf1b03.chunk.js": "/test-task-cars/static/js/75.edaf1b03.chunk.js",
     "static/js/938.389688a5.chunk.js": "/test-task-cars/static/js/938.389688a5.chunk.js",
@@ -9,13 +9,13 @@
     "static/media/sprite.svg": "/test-task-cars/static/media/sprite.c017765ba15466171a660d37304320e7.svg",
     "index.html": "/test-task-cars/index.html",
     "main.c3a6fafb.css.map": "/test-task-cars/static/css/main.c3a6fafb.css.map",
-    "main.384ceaaf.js.map": "/test-task-cars/static/js/main.384ceaaf.js.map",
+    "main.296e7081.js.map": "/test-task-cars/static/js/main.296e7081.js.map",
     "108.8f8b4896.chunk.js.map": "/test-task-cars/static/js/108.8f8b4896.chunk.js.map",
     "75.edaf1b03.chunk.js.map": "/test-task-cars/static/js/75.edaf1b03.chunk.js.map",
     "938.389688a5.chunk.js.map": "/test-task-cars/static/js/938.389688a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3a6fafb.css",
-    "static/js/main.384ceaaf.js"
+    "static/js/main.296e7081.js"
   ]
 }
