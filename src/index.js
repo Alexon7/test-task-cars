@@ -9,17 +9,16 @@ import {  persistor, store } from '../src/redux/store';
 import { Provider } from 'react-redux';
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={<Loader />} persistor={persistor}>
     <BrowserRouter basename="/test-task-cars">
-    <App />
-      </BrowserRouter>
+    <      App />
+       </BrowserRouter>
       </PersistGate>
     </Provider>
-     </React.StrictMode>
+ </React.StrictMode>
 );
 
 
